@@ -1,11 +1,11 @@
 {
   "name": "dpointer-build",
-  "version": "0.3.0-alpha",
+  "version": "0.3.1",
   "dependencies": {
     "requirejs-dplugins": "0.2.x"
   },
   "devDependencies": {
-    "dpointer": "0.3.0-alpha"
+    "dpointer": "0.3.1"
   },
   "ignore": [
     ".jshintrc",
