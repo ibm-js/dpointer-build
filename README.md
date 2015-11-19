@@ -24,8 +24,10 @@ Then install dependencies with bower (or manually from github if you prefer to):
 
 ## How to use
 
-To load the minified layer you need to wrap your main `require` call with another `require`, requiring `"dpointer-build/layer"`. Then you should continue to
-refer to modules with `"dpointer/foo"`.
+### `baseUrl` is the directory containing `dpointer-build`.
+This is the most common use-case so the needed configuration is built in the layer.
+To load the minified layer you just need to wrap your main `require` call with another `require`, requiring `"dpointer-build/layer"`.
+Then you should continue to refer to modules with `"dpointer/foo"`.
 
 For example, this code:
 ```js
@@ -41,6 +43,24 @@ require(["dpointer-build/layer"], function() {
 	});
 });
 ```
+
+### Other `baseUrl`
+
+If `baseUrl` is not the directory containing `dpointer-build`, custom configuration is needed.
+
+```js
+require.config({
+	paths: {
+		"dpointer": "path/to/dpointer-build"
+	}
+});
+```
+
+
+## Bug reporting
+
+Issues should be filled against the source version of this project at [ibm-js/dpointer](https://github.com/ibm-js/dpointer)
+
 
 ## Licensing
 
